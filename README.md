@@ -1,7 +1,7 @@
 # GraalVM native issues
 
-Reproducer projects for GraalVM native image.
+Reproducer projects for GraalVM native image issues.
 
 ```
-./gradlew nativeCompile
+./gradlew nativeRun
 ```
