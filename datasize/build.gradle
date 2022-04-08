@@ -1,0 +1,7 @@
+application {
+    mainClass = 'datasize.DataSizeMain'
+}
+
+dependencies {
+	implementation 'org.springframework:spring-core:5.3.18'
+}
