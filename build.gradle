@@ -2,11 +2,20 @@ plugins {
     id 'org.graalvm.buildtools.native' version '0.9.11' apply false
 }
 
-subprojects {
-	repositories {
-            mavenCentral()
-        }
+configure(subprojects) {
+	apply plugin: 'application'
+	apply plugin: 'org.graalvm.buildtools.native'
 
-        apply plugin: 'application'
-        apply plugin: 'org.graalvm.buildtools.native'
+	repositories {
+		mavenCentral()
+	}
+
+	graalvmNative {
+		binaries {
+			main {
+				buildArgs.add("-H:+PrintAnalysisCallTree")
+			}
+		}
+	}
 }
+
